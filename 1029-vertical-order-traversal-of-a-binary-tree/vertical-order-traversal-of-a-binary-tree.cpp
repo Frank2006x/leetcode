@@ -30,9 +30,7 @@ public:
             vector<int> r;
             for(auto j:i.second){
                 sort(j.second.begin(),j.second.end());
-                for(int k:j.second){
-                    r.push_back(k);
-                }
+                r.insert(r.end(),j.second.begin(),j.second.end());
             }
             res[index++]=r;
         }
